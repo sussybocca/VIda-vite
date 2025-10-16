@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vida - Train AI</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida - Train AI</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .notebook-container {
+            width: 100%;
+            height: 80vh;
+            border: 2px solid #00FF00;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-<header>Vida Train AI</header>
-<nav>
-    <a href="index.html">Chat</a>
-    <a href="train.html">Train AI</a>
-    <a href="explore.html">Explore Models</a>
-</nav>
+<header>
+    <h1>Vida Train AI</h1>
+    <nav>
+        <a href="index.html">Chat</a>
+        <a href="train.html" class="active">Train AI</a>
+        <a href="explore.html">Explore Models</a>
+    </nav>
+</header>
+
 <div class="container">
-    <div class="train-container">
-        <p>Provide a URL or notebook to train the AI:</p>
-        <form id="trainForm" enctype="multipart/form-data">
-            <input type="url" name="train_url" placeholder="Notebook or dataset URL" required>
-            <button type="submit">Start Training</button>
-        </form>
-        <div id="trainLoader">Training started<span>...</span></div>
+    <p>Interact with the live training notebook below:</p>
+
+    <div class="notebook-container">
+        <!-- Embed a public notebook URL here -->
+        <iframe 
+            src="https://colab.research.google.com/github/your-username/your-notebook-repo/blob/main/notebook.ipynb" 
+            width="100%" height="100%" frameborder="0">
+        </iframe>
     </div>
 </div>
-<script src="script.js"></script>
+
 </body>
 </html>
