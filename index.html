@@ -1,33 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vida - Chat AI</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida AI Chat</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>Vida AI Chat</header>
-<nav>
-    <a href="index.html">Chat</a>
-    <a href="train.html">Train AI</a>
-    <a href="explore.html">Explore Models</a>
-</nav>
-<div class="container">
-    <div class="chat-container">
-        <div id="messages"></div>
-        <div id="loader">AI is typing<span>...</span></div>
-        <form id="aiForm" enctype="multipart/form-data">
-            <input type="text" name="prompt" placeholder="Type your message..." required>
-            <input type="file" name="file">
-            <select name="model_choice">
-                <option value="inclusionAI/Ling-1T">Ling-1T (Text)</option>
-                <option value="deepseek-ai/DeepSeek-R1">DeepSeek-R1 (Image)</option>
-                <option value="microsoft/UserLM-8b">UserLM-8b</option>
-            </select>
-            <button type="submit">Send</button>
-        </form>
-    </div>
-</div>
-<script src="script.js"></script>
+    <header>
+        <h1>Vida AI Chat</h1>
+        <nav>
+            <a href="index.html">Chat</a>
+            <a href="train.html">Train AI</a>
+            <a href="explore.html">Explore Models</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="chat">
+            <div id="chat-box">
+                <div class="message bot">Hello! How can I assist you today?</div>
+            </div>
+            <textarea id="user-input" placeholder="Type your message..."></textarea>
+            <button id="send-btn">Send</button>
+        </section>
+
+        <section id="models">
+            <h2>Available AI Models</h2>
+            <ul>
+                <li><button class="model-btn" data-model="Ling-1T">Ling-1T (Text)</button></li>
+                <li><button class="model-btn" data-model="DeepSeek-R1">DeepSeek-R1 (Image)</button></li>
+                <li><button class="model-btn" data-model="UserLM-8b">UserLM-8b</button></li>
+                <li><button class="model-btn" data-model="GLM-4.6">GLM-4.6</button></li>
+                <li><button class="model-btn" data-model="LFM2-8B-A1B">LFM2-8B-A1B</button></li>
+                <li><button class="model-btn" data-model="Qwen3-8B">Qwen3-8B</button></li>
+                <li><button class="model-btn" data-model="Flan-T5-Large">Flan-T5-Large</button></li>
+                <li><button class="model-btn" data-model="Qwen-Image-Edit-Rapid-AIO">Qwen-Image-Edit-Rapid-AIO</button></li>
+                <li><button class="model-btn" data-model="HunyuanImage-3.0">HunyuanImage-3.0</button></li>
+                <li><button class="model-btn" data-model="FLUX.1-dev">FLUX.1-dev</button></li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
