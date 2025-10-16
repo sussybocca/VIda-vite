@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vida - Chat AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>Vida AI Chat</header>
+<nav>
+    <a href="index.html">Chat</a>
+    <a href="train.html">Train AI</a>
+    <a href="explore.html">Explore Models</a>
+</nav>
+<div class="container">
+    <div class="chat-container">
+        <div id="messages"></div>
+        <div id="loader">AI is typing<span>...</span></div>
+        <form id="aiForm" enctype="multipart/form-data">
+            <input type="text" name="prompt" placeholder="Type your message..." required>
+            <input type="file" name="file">
+            <select name="model_choice">
+                <option value="inclusionAI/Ling-1T">Ling-1T (Text)</option>
+                <option value="deepseek-ai/DeepSeek-R1">DeepSeek-R1 (Image)</option>
+                <option value="microsoft/UserLM-8b">UserLM-8b</option>
+            </select>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
